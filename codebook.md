@@ -23,13 +23,13 @@ X_train,y_train,subject_train,X_test,y_test,subject_test,features,activity_label
 - X_filtered: filtered out the measurements of features that only contain mean and standard deviation measurements of all the observations.
 
 
-# to make one full data set with both activity labels and subject ids. (Related to Requirement 1.)
+## to make one full data set with both activity labels and subject ids. (Related to Requirement 1.)
 
 - subject_all: subject ids for all the observations in both datasets.
 
 - all: full data set (containing both training and testing) with subject id and        activity for each observation. Variable names are changed to feature names
 
-# Step 6 (Requirement 5). To create a second, independent tidy data set with the average of each variable for each activity and each subject.
+## Step 6 (Requirement 5). To create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 - molten_all: a melted long data frame with subject id and activity as unique                identifiers.
 - new_tidy: a second tidy data with mean value of each variable calculated for             each subject in a certain activity.
