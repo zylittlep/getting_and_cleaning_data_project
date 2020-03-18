@@ -4,8 +4,9 @@ This repo contains
 - run_analysis.R: the script that performs analysis yielding new_tidy.txt.
 - new_tidy.txt: the second tidy dataset that shows the mean for each variable  of each subject and activity.
 - codebook: that explains the variables and data frames generated.
-
-#Working directory is set as the UCI HAR Dataset folder.
+Original data is obtained from
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+# Working directory is set as the UCI HAR Dataset folder.
 ## Step1. To read in all the data tables
 ```
 X_train<-read.table('train/X_train.txt')
