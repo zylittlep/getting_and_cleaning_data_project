@@ -28,13 +28,14 @@ colnames(X_all)<-features[,2]
 colnames(X_all)<-gsub("\\()","",colnames(X_all))
 colnames(X_all)[556]<-sub("\\)","",colnames(X_all)[556])
 
-# to make one full data set
+# to make one full data set, also make the filtered dataset (related to Requirement 1 and 2)
 subject_all<-rbind(subject_train,subject_test)
 colnames(subject_all)<-'subject_id'
 all<-cbind(subject_all,y_all,X_all)
+all_filtered<-all[,c(1,2,grep('[Mm]ean|[Ss]td',colnames(all)[1:563]))]
 
 # to make a second tidy data set
 library(reshape2)
-molten_all<-melt(all,id= c('subject_id','activity'))
-new_tidy<-dcast(molten_all,subject_id+activity~variable,mean)
-
+molten_all_filtered<-melt(all_filtered,id= c('subject_id','activity'))
+new_tidy<-dcast(molten_all_filtered,subject_id+activity~variable,mean)
+write.table(new_tidy,'new_tidy.txt',row.names=F)
