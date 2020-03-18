@@ -34,7 +34,7 @@ X_train,y_train,subject_train,X_test,y_test,subject_test,features,activity_label
 
 ## Step 6 (Requirement 5). To create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-- molten_filterd: a melted long data frame with subject id and activity as unique identifiers.
+- molten_all_filterd: a melted long data frame with subject id and activity as unique identifiers.
 - new_tidy: a second tidy data with mean value of each variable calculated for each subject in a certain activity.
 
 
